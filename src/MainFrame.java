@@ -261,10 +261,6 @@ public class MainFrame extends JFrame {
     }
 
     public static void main(String args[]) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
+        EventQueue.invokeLater(() -> new MainFrame().setVisible(true));
     }
 }
